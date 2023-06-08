@@ -10,6 +10,11 @@ public class PokemonController {
     // create a private field for dependency
     private Pokemon myPokemon;
 
+    @Autowired
+    public void setPokemon(Pokemon thePokemon) {
+        myPokemon = thePokemon;
+    }
+
     @GetMapping("/dailypokemon")
     public String getDailyPokemon() {
         return myPokemon.getDailyPokemon();

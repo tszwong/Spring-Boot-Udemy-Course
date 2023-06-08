@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class WaterPokemon implements Pokemon {
     @Override
     public String getDailyPokemon() {
-        return "You get a Squirtle";
+        return "You get a Squirtle and a Wartortle";
     }
 }
