@@ -6,18 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pokemondemo (2)" />
-        <module name="pokemondemo (1)" />
+        <module name="pokemondemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="pokemondemo" target="1.5" />
+      <module name="pokemondemo (1)" target="17" />
+      <module name="pokemondemo (2)" target="17" />
+      <module name="pokemondemo (3)" target="17" />
+      <module name="pokemondemo (4)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pokemondemo" options="-parameters" />
       <module name="pokemondemo (1)" options="-parameters" />
       <module name="pokemondemo (2)" options="-parameters" />
+      <module name="pokemondemo (3)" options="-parameters" />
+      <module name="pokemondemo (4)" options="-parameters" />
     </option>
   </component>
 </project>
