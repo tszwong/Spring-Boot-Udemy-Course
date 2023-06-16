@@ -4,7 +4,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/02-spring-boot-spring-core/04-qualifiers/pokemondemo/pom.xml" />
+        <option value="$PROJECT_DIR$/02-spring-boot-spring-core/09-java-config-bean/pokemondemo/pom.xml" />
       </list>
     </option>
   </component>
