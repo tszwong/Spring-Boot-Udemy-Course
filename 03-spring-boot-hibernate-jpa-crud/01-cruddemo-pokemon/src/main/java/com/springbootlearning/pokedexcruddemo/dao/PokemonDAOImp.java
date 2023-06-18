@@ -24,4 +24,10 @@ public class PokemonDAOImp implements PokemonDAO{
     public void save(Pokemon thePokemon) {
         entityManager.persist(thePokemon); // saves the pokemon to the database
     }
+
+    // implement find by id method
+    @Override
+    public Pokemon findById(Integer id) {
+        return entityManager.find(Pokemon.class, id);
+    }
 }
