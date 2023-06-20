@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.util.List;
+
 @SpringBootApplication
 public class PokedexcruddemoApplication {
 
@@ -18,10 +20,67 @@ public class PokedexcruddemoApplication {
 	public CommandLineRunner commandLineRunner(PokemonDAO pokemonDAO) { // inject PokemonDAO
 		return runner -> { // Java Lambda expression
 			//createPokemon(pokemonDAO);
-			//createMultiplePokemons(pokemonDAO);
+			createMultiplePokemons(pokemonDAO);
 
-			readPokemon(pokemonDAO);
+			//readPokemon(pokemonDAO);
+
+			//queryForPokemon(pokemonDAO);
+			//queryForPokemonByName(pokemonDAO);
+
+			//updatePokemon(pokemonDAO);
+
+			//deletePokemon(pokemonDAO);
+			//deleteAllPokemon(pokemonDAO);
 		};
+	}
+
+	private void deleteAllPokemon(PokemonDAO pokemonDAO) {
+		System.out.println("Deleting all pokemons from pokedex");
+		int numRowsDeleted = pokemonDAO.deleteAll();
+		System.out.println("Deleted pokemon count: " + numRowsDeleted);
+	}
+
+	private void deletePokemon(PokemonDAO pokemonDAO) {
+		int pokemonId = 3000;
+		System.out.println("Deleting pokemon id: " + pokemonId);
+		pokemonDAO.delete(pokemonId);
+	}
+
+	private void updatePokemon(PokemonDAO pokemonDAO) {
+		// retrieve pokemon based on the id: primary key
+		int pokemonId = 1;
+		System.out.println("Getting pokemon with ID: " + pokemonId);
+		Pokemon myPokemon = pokemonDAO.findById(pokemonId);
+
+		// change name to Squirtle
+		System.out.println("Updating pokemon...");
+		myPokemon.setName("Charizard");
+
+		// update the pokemon
+		pokemonDAO.update(myPokemon);
+
+		// display the updated content
+		System.out.println("Updated pokemon: " + myPokemon);
+	}
+
+	private void queryForPokemonByName(PokemonDAO pokemonDAO) {
+		// get a list of pokemons
+		List<Pokemon> thePokemons = pokemonDAO.findByLastName("Charmander");
+
+		// display list of pokemons
+		for (Pokemon tempPokemon : thePokemons) {
+			System.out.println(tempPokemon);
+		}
+	}
+
+	private void queryForPokemon(PokemonDAO pokemonDAO) {
+		// get a list of pokemons
+		List<Pokemon> thePokemons = pokemonDAO.findAll();
+
+		// display list of pokemons
+		for (Pokemon tempPokemon : thePokemons) {
+			System.out.println(tempPokemon);
+		}
 	}
 
 	private void readPokemon(PokemonDAO pokemonDAO) {
