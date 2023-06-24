@@ -4,7 +4,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/03-spring-boot-hibernate-jpa-crud/01-cruddemo-pokemon/pom.xml" />
+        <option value="$PROJECT_DIR$/04-spring-boot-rest-crud/01-spring-boot-rest-crud/pom.xml" />
       </list>
     </option>
   </component>

@@ -4,6 +4,7 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/02-spring-boot-spring-core/04-qualifiers-1/pokemondemo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/04-spring-boot-rest-crud/01-spring-boot-rest-crud/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -13,5 +14,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: jakarta.annotation:jakarta.annotation-api:2.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.1.1" level="project" />
   </component>
 </module>
