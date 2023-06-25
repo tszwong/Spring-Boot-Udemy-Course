@@ -2,8 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/02-spring-boot-spring-core/03-setter-injection/pokemondemo" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/02-spring-boot-spring-core/04-qualifiers/pokemondemo" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/03-spring-boot-hibernate-jpa-crud" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/04-spring-boot-rest-crud/02-spring-boot-rest-crud-pokemon" vcs="Git" />
   </component>
 </project>
