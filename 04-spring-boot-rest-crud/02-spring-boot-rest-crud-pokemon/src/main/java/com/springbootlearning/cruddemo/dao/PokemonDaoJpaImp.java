@@ -30,4 +30,31 @@ public class PokemonDaoJpaImp implements PokemonDAO{
         // return the results
         return pokemons;
     }
+
+    @Override
+    public Pokemon findById(int theId) {
+        // get pokemon
+        Pokemon thePokemon = entityManager.find(Pokemon.class, theId);
+
+        // return pokemon
+        return thePokemon;
+    }
+
+    @Override
+    public Pokemon save(Pokemon thePokemon) {
+        // save the pokemon
+        Pokemon dbPokemon = entityManager.merge(thePokemon);
+
+        // return the dbPokemon
+        return dbPokemon;
+    }
+
+    @Override
+    public void deleteById(int theId) {
+        // find the pokemon by id
+        Pokemon thePokemon = entityManager.find(Pokemon.class, theId);
+
+        // remove pokemon
+        entityManager.remove(thePokemon);
+    }
 }
