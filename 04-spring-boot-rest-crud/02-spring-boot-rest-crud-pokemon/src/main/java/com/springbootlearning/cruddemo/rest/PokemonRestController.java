@@ -56,4 +56,18 @@ public class PokemonRestController {
         Pokemon dbPokemon = pokemonService.save(thePokemon);
         return dbPokemon;
     }
+
+    // mapping for DELETE /pokemons/{pokemonId} - delete pokemon
+    @DeleteMapping("/pokemons/{pokemonId}")
+    public String deletePokemon(@RequestBody int pokemonId) {
+        Pokemon thePokemon = pokemonService.findById(pokemonId);
+
+        // throw an exception if null
+        if (thePokemon == null) {
+            throw new RuntimeException("Pokemon id not found - " + pokemonId);
+        }
+
+        pokemonService.deleteById(pokemonId);
+        return "Deleted pokemon with id - " + pokemonId;
+    }
 }
